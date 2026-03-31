@@ -68,6 +68,7 @@
         .delay-200 { animation-delay: 0.2s; }
         .delay-300 { animation-delay: 0.3s; }
         .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; } /* 今回追加：5つ目のアニメーション遅延 */
     </style>
 </head>
 <body class="font-serif min-h-screen flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8">
@@ -75,10 +76,10 @@
     <!-- Header Section -->
     <header class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
         <p class="font-sans text-nordic-blue tracking-[0.2em] text-sm font-semibold mb-2">SCANDINAVIAN LIFESTYLE</p>
-        <h1 class="text-3xl md:text-4xl font-semibold mb-4 text-gray-800">DLoFre's Cafe Guide</h1>
+        <h1 class="text-3xl md:text-4xl font-semibold mb-4 text-gray-800">DLoFre's Lunch & Cafe Guide</h1>
         <p class="text-sm md:text-base text-gray-600 leading-relaxed">
             静岡県浜松市・都田にある「ドロフィーズキャンパス」。<br class="hidden md:inline">
-            北欧家具や美しい自然に囲まれた、心豊かになる4つのカフェ＆ダイニングをご紹介します。
+            北欧家具や美しい自然に囲まれた、心豊かになる5つのランチ＆カフェをご紹介します。
         </p>
     </header>
 
@@ -88,8 +89,8 @@
         <!-- Cafe 1: DLoFre's Cafe -->
         <article class="glass-card rounded-2xl overflow-hidden flex flex-col fade-in-up delay-100">
             <div class="h-48 bg-gray-200 relative overflow-hidden group">
-                <!-- Placeholder Image (Using an aesthetic Unsplash image for preview) -->
-                <img src="cafe1.jpg.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <!-- .jpgが2重になっていたため、一旦 cafe1.jpg に修正しています。必要に応じて書き換えてください -->
+                <img src="cafe1.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                 <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-0 transition-all duration-300"></div>
             </div>
             <div class="p-6 flex flex-col flex-grow">
@@ -176,8 +177,34 @@
                     <a href="https://dlofre.jp/spots/miyakoda-eki-cafe/" target="_blank" rel="noopener noreferrer" class="btn-hover-effect flex items-center justify-center w-full py-2.5 px-4 bg-nordic-blue text-white rounded-lg shadow-sm hover:bg-nordic-blue-hover">
                         <i class="fas fa-globe mr-2"></i> Official Website
                     </a>
-                    <!-- 駅カフェ固有のIGがない場合は、関連性の高いキャンパス公式やハッシュタグリンクを配置 -->
                     <a href="https://www.instagram.com/miyakoda.eki.cafe/?hl=ja" target="_blank" rel="noopener noreferrer" class="btn-hover-effect flex items-center justify-center w-full py-2.5 px-4 bg-white border border-gray-200 text-gray-700 rounded-lg shadow-sm hover:border-[#E1306C] hover:text-[#E1306C]">
+                        <i class="fab fa-instagram mr-2 text-lg"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Cafe 5: ソバデルチン (今回追加) -->
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col fade-in-up delay-500">
+            <div class="h-48 bg-gray-200 relative overflow-hidden group">
+                <!-- 画像ファイル名はこちらに設定してください（例: soba1.jpg） -->
+                <img src="soba1.jpg" alt="ソバデルチン" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <div class="flex items-center justify-between mb-2">
+                    <h2 class="text-xl font-semibold text-gray-800">ソバデルチン</h2>
+                    <!-- タグの色は和風を意識して少しグリーン系(emerald)にしています -->
+                    <span class="text-xs font-sans bg-emerald-600 text-white px-2 py-1 rounded-full">Soba & Lunch</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-6 flex-grow">
+                    ドロフィーズキャンパス内で味わえる、本格的で体に優しいお蕎麦。和の趣と北欧の空気感が交差する空間で、ホッと心落ち着くランチタイムをお楽しみいただけます。
+                </p>
+                <div class="flex flex-col space-y-3 mt-auto font-sans">
+                    <!-- リンクURLは実際の公式サイトやInstagramのURLに書き換えてください -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn-hover-effect flex items-center justify-center w-full py-2.5 px-4 bg-nordic-blue text-white rounded-lg shadow-sm hover:bg-nordic-blue-hover">
+                        <i class="fas fa-globe mr-2"></i> Official Website
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn-hover-effect flex items-center justify-center w-full py-2.5 px-4 bg-white border border-gray-200 text-gray-700 rounded-lg shadow-sm hover:border-[#E1306C] hover:text-[#E1306C]">
                         <i class="fab fa-instagram mr-2 text-lg"></i> Instagram
                     </a>
                 </div>
@@ -187,7 +214,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="mt-16 text-center text-sm text-gray-400 fade-in-up delay-400">
+    <footer class="mt-16 text-center text-sm text-gray-400 fade-in-up delay-500">
         <p>※各店舗の営業時間・定休日は公式サイトやInstagramで最新情報をご確認ください。</p>
         <p class="mt-2 font-sans">&copy; 2026 DLoFre's Cafe Guide</p>
     </footer>
