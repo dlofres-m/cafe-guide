@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLoFre's Cafe & Dining Guide</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nordic-bg': '#F9F8F6', // ナチュラルなオフホワイト
+                        'nordic-text': '#4A4A4A',
+                        'nordic-blue': '#6B8E9B', // 北欧風のくすんだブルー
+                        'nordic-blue-hover': '#5A7A87',
+                        'nordic-accent': '#D4A373',
+                    },
+                    fontFamily: {
+                        'serif': ['"Noto Serif JP"', 'serif'],
+                        'sans': ['"Quicksand"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F9F8F6;
+            color: #4A4A4A;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+        }
+        .btn-hover-effect {
+            transition: all 0.3s ease;
+        }
+        .btn-hover-effect:hover {
+            transform: scale(1.02);
+        }
+        /* ふわっと表示されるアニメーション */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="font-serif min-h-screen flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8">
+
+    <!-- Header Section -->
+    <header class="text-center max-w-2xl mx-auto mb-12 fade-in-up">
+        <p class="font-sans text-nordic-blue tracking-[0.2em] text-sm font-semibold mb-2">SCANDINAVIAN LIFESTYLE</p>
+        <h1 class="text-3xl md:text-4xl font-semibold mb-4 text-gray-800">DLoFre's Cafe Guide</h1>
+        <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+            静岡県浜松市・都田にある「ドロフィーズキャンパス」。<br class="hidden md:inline">
+            北欧家具や美しい自然に囲まれた、心豊かになる4つのカフェ＆ダイニングをご紹介します。
+        </p>
+    </header>
+
+    <!-- Main Content: Cafe List -->
+    <main class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Cafe 1: DLoFre's Cafe -->
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col fade-in-up delay-100">
+            <div class="h-48 bg-gray-200 relative overflow-hidden group">
+                <!-- Placeholder Image (Using an aesthetic Unsplash image for preview) -->
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-0 transition-all duration-300"></div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <div class="flex items-center justify-between mb-2">
+                    <h2 class="text-xl font-semibold text-gray-800">DLoFre's Cafe</h2>
+                    <span class="text-xs font-sans bg-nordic-blue text-white px-2 py-1 rounded-full">Cafe & Sweets</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-6 flex-grow">
+                    築70年の古民家をリノベーションした空間。憧れの北欧名作家具に腰掛けながら、体に優しいランチや自家製スイーツをゆったりと楽しめます。
+                </p>
+                <div class="flex flex-col space-y-3 mt-auto font-sans">
+                    <a href="https://dlofre.jp/spots/dlofres_cafe/" target="_blank" rel="noopener noreferrer" class="btn-hover-effect flex items-center justify-center w-full py-2.5 px-4 bg-nordic-blue text-white rounded-lg shadow-sm hover:bg-nordic-blue-hover">
+                        <i class="fas fa-globe mr-2"></i> Official Website
+                    </a>
+                    <a href="https://www.instagram.com/dlofrescafe/" target="_blank" rel="noopener noreferrer" class="btn-hover-effect flex items-center justify-center w-full py-2.5 px-4 bg-white border border-gray-200 text-gray-700 rounded-lg shadow-sm hover:border-[#E1306C] hover:text-[#E1306C]">
+                        <i class="fab fa-instagram mr-2 text-lg"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Cafe 2: 9sense dining -->
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col fade-in-up delay-200">
+            <div class="h-48 bg-gray-200 relative overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=800" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <div class="flex items-center justify-between mb-2">
+                    <h2 class="text-xl font-semibold text-gray-800">9sense dining</h2>
+                    <span class="text-xs font-sans bg-gray-700 text-white px-2 py-1 rounded-full">Dining & Cafe</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-6 flex-grow">
+                    「空間と素材と料理」をテーマにした大人のためのダイニング。カフェタイムには、美しい食器と共に上質なスイーツやドリンクを提供しています。
+                </p>
+                <div class="flex flex-col space-y-3 mt-auto font-sans">
+                    <a href="https://dlofre.jp/spots/9sense/" target="_blank" rel="noopener noreferrer" class="btn-hover-effect flex items-center justify-center w-full py-2.5 px-4 bg-nordic-blue text-white rounded-lg shadow-sm hover:bg-nordic-blue-hover">
+                        <i class="fas fa-globe mr-2"></i> Official Website
+                    </a>
+                    <a href="https://www.instagram.com/9sense_dining/" target="_blank" rel="noopener noreferrer" class="btn-hover-effect flex items-center justify-center w-full py-2.5 px-4 bg-white border border-gray-200 text-gray-700 rounded-lg shadow-sm hover:border-[#E1306C] hover:text-[#E1306C]">
+                        <i class="fab fa-instagram mr-2 text-lg"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Cafe 3: nordic deli -->
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col fade-in-up delay-300">
+            <div class="h-48 bg-gray-200 relative overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1495474472204-51860569ae23?auto=format&fit=crop&q=80&w=800" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <div class="flex items-center justify-between mb-2">
+                    <h2 class="text-xl font-semibold text-gray-800">nordic deli</h2>
+                    <span class="text-xs font-sans bg-nordic-accent text-white px-2 py-1 rounded-full">Deli & Drink</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-6 flex-grow">
+                    北欧スローフードをカジュアルに楽しめるデリ。テイクアウトして広大なドロフィーズキャンパスのお気に入りの場所（ベンチやガーデン）でピクニック気分も味わえます。
+                </p>
+                <div class="flex flex-col space-y-3 mt-auto font-sans">
+                    <a href="https://dlofre.jp/spots/nordic-deli/" target="_blank" rel="noopener noreferrer" class="btn-hover-effect flex items-center justify-center w-full py-2.5 px-4 bg-nordic-blue text-white rounded-lg shadow-sm hover:bg-nordic-blue-hover">
+                        <i class="fas fa-globe mr-2"></i> Official Website
+                    </a>
+                    <a href="https://www.instagram.com/dlofres.interior/" target="_blank" rel="noopener noreferrer" class="btn-hover-effect flex items-center justify-center w-full py-2.5 px-4 bg-white border border-gray-200 text-gray-700 rounded-lg shadow-sm hover:border-[#E1306C] hover:text-[#E1306C]">
+                        <i class="fab fa-instagram mr-2 text-lg"></i> Instagram (Campus)
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Cafe 4: MIYAKODA 駅Cafe -->
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col fade-in-up delay-400">
+            <div class="h-48 bg-gray-200 relative overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <div class="flex items-center justify-between mb-2">
+                    <h2 class="text-xl font-semibold text-gray-800">MIYAKODA 駅Cafe</h2>
+                    <span class="text-xs font-sans bg-yellow-600 text-white px-2 py-1 rounded-full">Coffee & Retro</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-6 flex-grow">
+                    天竜浜名湖鉄道「都田駅」構内にあるカフェ。マリメッコのファブリックとヴィンテージ感が融合した空間で、サイフォンコーヒーと手作りクッキーを楽しめます。
+                </p>
+                <div class="flex flex-col space-y-3 mt-auto font-sans">
+                    <a href="https://dlofre.jp/spots/miyakoda-eki-cafe/" target="_blank" rel="noopener noreferrer" class="btn-hover-effect flex items-center justify-center w-full py-2.5 px-4 bg-nordic-blue text-white rounded-lg shadow-sm hover:bg-nordic-blue-hover">
+                        <i class="fas fa-globe mr-2"></i> Official Website
+                    </a>
+                    <!-- 駅カフェ固有のIGがない場合は、関連性の高いキャンパス公式やハッシュタグリンクを配置 -->
+                    <a href="https://www.instagram.com/explore/tags/都田駅カフェ/" target="_blank" rel="noopener noreferrer" class="btn-hover-effect flex items-center justify-center w-full py-2.5 px-4 bg-white border border-gray-200 text-gray-700 rounded-lg shadow-sm hover:border-[#E1306C] hover:text-[#E1306C]">
+                        <i class="fab fa-instagram mr-2 text-lg"></i> Instagram (Tags)
+                    </a>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 text-center text-sm text-gray-400 fade-in-up delay-400">
+        <p>※各店舗の営業時間・定休日は公式サイトやInstagramで最新情報をご確認ください。</p>
+        <p class="mt-2 font-sans">&copy; 2026 DLoFre's Cafe Guide</p>
+    </footer>
+
+</body>
+</html>
